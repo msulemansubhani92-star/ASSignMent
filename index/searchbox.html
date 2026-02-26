@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Box UI</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for search icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0b0b0c, #1dacb6);
+  font-family: Arial, sans-serif;
+}
+
+.search-box {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50px;
+  transition: 0.5s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.search-box:hover {
+  width: 300px;
+}
+
+.search-box input {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 240px;
+  height: 60px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 20px;
+}
+
+.search-box button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+  </style>
+</head>
+<body>
+
+<div class="search-box">
+  <input type="text" placeholder="Search here..." />
+  <button type="submit">
+    <i class="fa fa-search"></i>
+  </button>
+</div>
+
+</body>
+</html>

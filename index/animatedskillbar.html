@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animated Skills Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.skills-section {
+    width: 500px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    height: 14px;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-per {
+    height: 14px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border-radius: 10px;
+    position: relative;
+    width: 0;
+    animation: fillBars 2.5s ease-in-out forwards;
+}
+
+/* Individual Skill Percentages */
+.skill-per.html {
+    width: 95%;
+}
+
+.skill-per.css {
+    width: 90%;
+}
+
+.skill-per.js {
+    width: 75%;
+}
+
+/* Animation */
+@keyframes fillBars {
+    from {
+        width: 0;
+    }
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    right: -25px;
+    top: -28px;
+    background: #0072ff;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+    </style>
+</head>
+<body>
+
+<section class="skills-section">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="skill-bar">
+            <div class="skill-per html">
+                <span class="tooltip">95%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="skill-bar">
+            <div class="skill-per css">
+                <span class="tooltip">90%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-bar">
+            <div class="skill-per js">
+                <span class="tooltip">75%</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
